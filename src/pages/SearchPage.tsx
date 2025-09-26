@@ -29,8 +29,11 @@ const SearchPage: React.FC = () => {
     } catch (error) {
       console.error("Search failed:", error);
       setPlaces([]);
+      const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
       setServerError(
-        "Failed to connect to server. Please make sure the backend is running on http://localhost:3001"
+        isDevelopment 
+          ? "Failed to connect to server. Please make sure the backend is running on http://localhost:3001"
+          : "Failed to load places. Please try again later."
       );
     } finally {
       setLoading(false);

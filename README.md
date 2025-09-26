@@ -130,3 +130,27 @@ backend/
 - **RESTful Design**: Standard HTTP methods and status codes
 - **Price Ranges**: Real price values (Free, $1-$20, $21-$50, $51-$100, $100+) instead of generic symbols
 - **Logging**: Request logging middleware for debugging
+
+## Deployment
+
+### Deploy to Vercel
+
+This project is configured for easy deployment to Vercel:
+
+1. **Push to GitHub**: Make sure your code is in a GitHub repository
+2. **Connect to Vercel**: Import your repository in Vercel dashboard
+3. **Deploy**: Vercel will automatically:
+   - Build the React frontend
+   - Deploy API routes as serverless functions
+   - Set up proper routing and CORS
+
+The project includes:
+- **Serverless API Functions**: Located in `/api/` directory
+- **Environment Configuration**: Automatic API URL switching
+- **Vercel Configuration**: Proper routing and headers setup
+
+### Local Development vs Production
+
+- **Development**: Uses Express.js server on `localhost:3001`
+- **Production**: Uses Vercel serverless functions at `/api/*`
+- **Automatic Switching**: API service detects environment automatically
