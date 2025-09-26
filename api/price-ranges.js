@@ -1,6 +1,6 @@
-const { priceRanges } = require("../backend/data/placesData.js");
+import { priceRanges } from "../backend/data/placesData.js";
 
-module.exports = function handler(req, res) {
+export default function handler(req, res) {
   // Enable CORS
   res.setHeader("Access-Control-Allow-Credentials", true);
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -23,4 +23,4 @@ module.exports = function handler(req, res) {
   } else {
     res.status(405).json({ message: "Method not allowed" });
   }
-}
+};

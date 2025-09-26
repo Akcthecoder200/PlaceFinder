@@ -185,7 +185,7 @@ const priceRanges = [
   { label: "$100+", min: 101, max: 999 },
 ];
 
-module.exports = {
+export {
   places,
   locations,
   activities,
