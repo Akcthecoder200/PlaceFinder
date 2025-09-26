@@ -145,6 +145,7 @@ This project is configured for easy deployment to Vercel:
    - Set up proper routing and CORS
 
 The project includes:
+
 - **Serverless API Functions**: Located in `/api/` directory
 - **Environment Configuration**: Automatic API URL switching
 - **Vercel Configuration**: Proper routing and headers setup
